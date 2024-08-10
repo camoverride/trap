@@ -1,0 +1,15 @@
+[Unit]
+Description=face capture
+After=default.target
+
+[Service]
+Type=simple
+Restart=always
+WorkingDirectory=/home/pi/trap
+ExecStart=/home/pi/trap/.venv/bin/python /home/pi/trap/get_faces.py
+StandardOutput=journal
+StandardError=journal
+Environment="PATH=/home/pi/trap/.venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+[Install]
+WantedBy=default.target
