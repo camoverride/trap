@@ -1,3 +1,4 @@
+import time
 import cv2
 from datetime import datetime
 import mediapipe as mp
@@ -55,6 +56,10 @@ def scan_for_faces(margin, confidence, data_dir):
             # Break the loop on 'q' key press
             if cv2.waitKey(20) & 0xFF == ord('q'):
                 break
+
+            # Add additional timeout after each loop to reduce computations.
+            time.sleep(0.5)
+
 
     # Release the webcam and close windows
     cap.release()
