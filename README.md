@@ -2,13 +2,15 @@
 
 ## Setup
 
-- `python -m venv .venv`
+- `python -m venv --system-site-packages .venv`
 - `source .venv/bin/activate`
 - `pip install -r requirements.txt`
 - `mkdir faces`
 
 
 ## Run
+
+Test mode: `python get_faces.py`
 
 Start a service with *systemd*. This will start the program when the computer starts and revive it when it dies:
 
