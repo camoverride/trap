@@ -41,6 +41,7 @@ def scan_for_faces(margin, confidence, data_dir):
 
             # Check if faces are detected
             if results.detections:
+                print(f"Face detected: {datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}")
                 for detection in results.detections:
                     # Adjust margin_fraction as needed
                     cropped_face = crop_face(frame, detection, margin_fraction=margin)
