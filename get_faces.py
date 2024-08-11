@@ -70,5 +70,5 @@ if __name__ == "__main__":
     cap = cv2.VideoCapture(0)
 
     scan_for_faces(margin=1,
-                   confidence=0.5,
+                   confidence=0.9,
                    data_dir="faces")
